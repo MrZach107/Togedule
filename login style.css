@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900display=sawp");
+
+body {
+    font-family: Roboto;
+    background: linear-gradient(to top,#f13c77, #f5e6ad);
+    display: flex;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.login {
+    width: 300px;
+    color: #BF3060;
+    padding: 40px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px #2b105560;
+    background-color: linear-gradient(to top,#f13c77, #f5e6ad);
+    transform: translateY(65px);
+}
+.login:hover
+{
+    box-shadow: 1px 1px 10px #f8f8f8 inset, 10px 10px 20px #2b105560;
+    transition: 1s;
+}
+
+.login input {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    background: none;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 22px;
+    outline:none;
+    color : #023e8a;
+}
+
+.login input[type="text"], .login input[type = "password"] {
+    border: 2px solid #BF3060;
+    width: 220px;
+}
+
+.login input[type="text"]::placeholder, .login input[type = "password"]::placeholder {
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+
+}
+
+.login a {
+    padding: 8px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    display: inline-block;
+    background: #BF3060;
+    color: #fff;
+    font-size: 1.5em;
+}
+.login label
+{
+    color: #BF3060;
+    font-family:"Poppins",sans-serif;
+    font-size: 20px;
+    float: left;
+    align-items: center;
+    transform: translateY(7px);
+}
+.login label:hover
+{
+    color: #551043
+}
+
+.login input[type="text"]:hover, .login input[type = "password"]:hover {
+    border-color: #2b1055;
+    width: 235px;
+    transition: 0.5s;
+}
+
+.login a:hover {
+    border:#2b1055;
+    background-color: #551043;
+    transition: 1s;
+}
+
+header
+{
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo
+{
+    color: #b55256;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header .logo:hover
+{
+    color: #b5525695;
+    transition: 0.5s;
+}
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    text-decoration:  none;
+    padding:  8px 15px;
+    color: #2b1055;
+    background: #f8f8f8;
+    border-radius: 20px;   
+    position: relative;
+    right: 13.8em;
+    top: 0;
+ 
+}
+header ul li a:hover 
+{
+    background: #2b1055;
+    color: #f8f8f8;
+    transition: 0.5s;
+    box-shadow: 1px 1px 5px #fff inset;
+}
