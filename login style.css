@@ -10,6 +10,11 @@ body {
     overflow: hidden;
 }
 
+html, body /*這個很重要!! 讓 Mobile 與 PC 都變成 "overflow-x: hidden;" 的關鍵*/
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
 .login {
     width: 300px;
@@ -21,6 +26,7 @@ body {
     background-color: linear-gradient(to top,#f13c77, #f5e6ad);
     transform: translateY(65px);
 }
+
 .login:hover
 {
     box-shadow: 1px 1px 10px #f8f8f8 inset, 10px 10px 20px #2b105560;
@@ -120,9 +126,12 @@ header ul
 }
 header ul li
 {
+    display: flex;
     list-style: none;
     margin-left: 20px;
+    text-align: center;
 }
+
 header ul li a
 {
     text-decoration:  none;
@@ -131,7 +140,6 @@ header ul li a
     background: #f8f8f8;
     border-radius: 20px;   
     position: relative;
-    right: 13.8em;
     top: 0;
  
 }

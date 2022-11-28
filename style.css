@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900display=sawp");
 *
+
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
     scroll-behavior: smooth;
+    
+}
+html, body /*這個很重要!! 讓 Mobile 與 PC 都變成 "overflow-x: hidden;" 的關鍵*/
+{
+    overflow-x: hidden;
 }
 
 body
@@ -50,8 +56,10 @@ header ul
 }
 header ul li
 {
+    display: flex;
     list-style: none;
     margin-left: 20px;
+    text-align: center;
 }
 header ul li a
 {
@@ -179,4 +187,12 @@ footer
     color:#2b1055
 
 
+}
+
+@media screen and (max-width:700px) { 
+    header ul li
+{
+    list-style: none;
+    margin-left: 10px;
+}
 }
