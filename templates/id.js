@@ -1,45 +1,12 @@
-function postData(url, data) {
-  // Default options are marked with *
-  return fetch(url, {
-      body: JSON.stringify(data), // must match 'Content-Type' header
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, same-origin, *omit
-      headers: {
-          'user-agent': 'Example',
-          'content-type': 'application/json'
-      },
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      mode: 'cors', // no-cors, cors, *same-origin
-      redirect: 'follow', // manual, *follow, error
-      referrer: 'no-referrer', // *client, no-referrer
-  })
-      .then(response => response.json()) // 輸出成 json
-}
-
 function submit(){
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  var form = document.forms['form']; // 取得 name 屬性為 form 的表單
+  var username = form.elements.id.value("username").value;
+  var password = form.elements.id.value("password").value;
 
-  const id = {
-    email,
-    password
-  }
+  postData("http://127.0.0.1:5500/result/",username)
+  postData("http://127.0.0.1:5500/result/",password)
 
-  postData("http://0.0.0.0:3000/id",id)
-  .then(id=>{
-    console.log(id);
+  .then(form=>{
+    console.log(form);
   })
-
 }
-
-
-/*
-id.addEvenListener('submit',()=> {
-  let user = email.value
-  
-  event.preventDefault() // 新增此行
-  password.innerHTML = `<h3 class="display-3">Hi, ${user}</h3>`
-}
-*/
-
-)

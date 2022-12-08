@@ -1,9 +1,10 @@
 <html>
     <head>
-        <title>Login Website | Togedule </title>
-        <link rel="stylesheet" href = "login style.css "/>
+        <title>Login | Togedule </title>
+        <link rel="stylesheet" type="text/css" href = "{{ url_for('static',filename='css/login.css') }}"/>
         <script>
             src="https://kit.fontawesome.com/64d58efce2.js"
+            crossorigin="anonymous"
         </script>
     </head>
     <body>
@@ -13,21 +14,25 @@
                 <li><a href="#" >Chat Room</a></li>
                 <li><a href="#" >My Info</a></li>
                 <li><a href="https://my.ntu.edu.tw/?block=5,6" >NTU Website</a></li>
-                <li><a onclick="history.back()">Back</a></li>
+                <li><a href="http://127.0.0.1:5500/" >Home</a></li>
             </ul>     
         </header>
         
-        <form action = "" class="login" method="post">
+        <form name ="form" class="login" method="POST">
             <h1>帳號登入 Login</h1>
             <div class="input-field">
-                <label for="email" class="email" >帳號&nbsp:</label>
-                <input id = "email" type = "text" placeholder= "User" />
-                <label for="password" class="password" >密碼&nbsp:</label>
-                <input id = "password" type = "password" placeholder = "Password" />
-                <input type="submit" value="Login" onclick="submit()" id="loginbtn">
-                <script src="id.js"></script>
-                <py-script src="run.py"></py-script>
+                <label for="username" class="label" >帳號&nbsp:</label>
+                <input name = "username" type = "text" placeholder= "User" />
+
+                <label for="password" class="label" >密碼&nbsp:</label>
+                <input name = "password" type = "password" placeholder = "Password" />
+
+            <input type="submit" value="Login" class="btn" onclick="submit()">
+            <script src="static/js/post_user.js"></script>
+            <py-script src="/run.py"></py-script>
             </div>
+            
+
             <!--
 
             <p class="social-text">Or sign in with social platforms</p>
@@ -48,5 +53,7 @@
 
             -->
         </form>
+
+
     </body>
 </html>
